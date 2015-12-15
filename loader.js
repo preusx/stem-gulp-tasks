@@ -8,12 +8,15 @@ global.WATCHING = false;
 
 global.P = {
   styl  : 'stylus/',
-  css   : 'css/',
   jade  : 'jade/',
-  html  : '',
-  js    : 'js/',
-  img   : 'img/',
 
+  css   : 'css/',
+  php   : 'php/',
+  py    : 'python/',
+  html  : 'html/',
+  js    : 'js/',
+
+  img   : 'img/',
   font  : 'fonts/',
 
   dev   : './dev/',
