@@ -1,3 +1,4 @@
+var gulp = require('gulp');
 var loader = require('../loader.js');
 
 loader(__dirname, [
