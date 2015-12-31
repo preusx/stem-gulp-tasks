@@ -49,6 +49,14 @@ module.exports = function loader(dir, taskPaths) {
 
     if(typeof task.watch == 'function') {
       gulp.task(taskName + ':watch', task.watch);
+    } else if(task.watch) {
+      gulp.task(taskName + ':watch', (function(tN, wch) {
+        return function() {
+          return watch(wch, function() {
+              gulp.start(tN + ':dev');
+            });
+        };
+      })(taskName, task.watch));
     }
   }
 
@@ -66,15 +74,7 @@ module.exports = function loader(dir, taskPaths) {
       var task = tasks[i];
 
       if(task.watch) {
-        if(typeof task.watch == 'function') {
-          gulp.start(i + ':watch');
-        } else {
-          watch(task.watch, (function(taskName) {
-            return function() {
-              gulp.start(taskName + ':dev');
-            };
-          })(i));
-        }
+        gulp.start(i + ':watch');
       }
     }
   });
