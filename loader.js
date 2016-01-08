@@ -3,27 +3,7 @@ var path = require('path');
 var gulp  = require('gulp');
 var watch = require('gulp-watch');
 
-global.DEBUG    = false;
-global.WATCHING = false;
-
-global.P = {
-  styl  : 'stylus/',
-  jade  : 'jade/',
-
-  css   : 'css/',
-  php   : 'php/',
-  py    : 'python/',
-  html  : 'html/',
-  js    : 'js/',
-
-  img   : 'img/',
-  font  : 'fonts/',
-  vendor: 'vendor/',
-
-  dev   : './dev/',
-  dist  : './dist/',
-};
-
+require('./config');
 
 module.exports = function loader(dir, taskPaths) {
   var tasks = {};
