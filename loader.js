@@ -18,6 +18,7 @@ global.P = {
 
   img   : 'img/',
   font  : 'fonts/',
+  vendor: 'vendor/',
 
   dev   : './dev/',
   dist  : './dist/',
