@@ -7,6 +7,7 @@ require('./config');
 
 module.exports = function loader(dir, taskPaths) {
   var tasks = {};
+  global.DIR = dir;
 
   /**
    * Loading tasks
