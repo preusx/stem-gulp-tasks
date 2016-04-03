@@ -3,6 +3,7 @@ module.exports.WATCHING = global.WATCHING = false;
 
 module.exports.P = global.P = {
   dev: {
+    root:   './dev/' +    'root/',
     php:    './dev/' +    'php/',
     py:     './dev/' +    'py/',
     js:     './dev/' +    'js/',
@@ -17,6 +18,7 @@ module.exports.P = global.P = {
     vendor: './dev/' +    'vendor/',
     },
   dist: {
+    root:   './dist/',
     php:    './dist/' +   'php/',
     py:     './dist/' +   'py/',
     js:     './dist/' +   'js/',
