@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import { P as p } from '../config';
+import { P as p } from '../build/config';
 
 import {
   Task,
@@ -7,7 +7,7 @@ import {
   CopyTask,
   StylusTask,
   WebpackTask,
-  } from '../';
+  } from '../build/';
 
 
 let paths = {
@@ -25,7 +25,7 @@ let paths = {
     ],
 
   js: [
-    `${p.dev.js}*.js`,
+    `${p.dev.js}**/*.js`,
     ],
 };
 
