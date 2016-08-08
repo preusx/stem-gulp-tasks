@@ -32,27 +32,27 @@ let paths = {
 gulp.task('stylus', () => {
   return (new StylusTask())
     .pipes(gulp.src(paths.stylus))
-    .pipe(gulp.dest(p.dist.stylus));
+    .pipe(gulp.dest(p.dest.stylus));
 });
 
 gulp.task('pug', () => {
   return (new PugTask({
-        dest: p.dist.pug,
+        dest: p.dest.pug,
         }))
     .pipes(gulp.src(paths.pug))
-    .pipe(gulp.dest(p.dist.pug));
+    .pipe(gulp.dest(p.dest.pug));
 });
 
 gulp.task('copy', () => {
   return (new CopyTask())
     .pipes(gulp.src(paths.copy))
-    .pipe(gulp.dest(p.dist.public));
+    .pipe(gulp.dest(p.dest.public));
 });
 
 gulp.task('js', () => {
   return (new WebpackTask(require('./webpack.config')))
     .pipes(gulp.src(paths.js))
-    .pipe(gulp.dest(p.dist.js));
+    .pipe(gulp.dest(p.dest.js));
 });
 
 
